@@ -1,1 +1,384 @@
 
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>ZX__SCOOBYXMODZ</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#07111d;
+overflow:hidden;
+color:white;
+}
+
+canvas{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-1;
+}
+
+.container{
+width:100%;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+.card{
+
+width:360px;
+background:rgba(8,18,32,.90);
+border:2px solid #00bfff;
+border-radius:20px;
+padding:25px;
+box-shadow:0 0 30px #00bfff;
+text-align:center;
+
+}
+
+.logo{
+
+font-size:34px;
+font-weight:bold;
+color:#00cfff;
+text-shadow:0 0 20px cyan;
+
+}
+
+.sub{
+
+margin-top:8px;
+color:#9bdfff;
+
+}
+
+button{
+
+width:100%;
+padding:15px;
+margin-top:15px;
+font-size:17px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+
+}
+
+.join{
+
+background:#009dff;
+color:white;
+
+}
+
+.telegram{
+
+background:#ff0088;
+color:white;
+
+}
+
+input{
+
+width:100%;
+padding:15px;
+margin-top:20px;
+border-radius:10px;
+border:none;
+font-size:17px;
+
+}
+
+.page{
+
+display:none;
+
+}
+
+.active{
+
+display:block;
+
+}
+
+.progress{
+
+margin-top:20px;
+height:10px;
+background:#1d2b40;
+border-radius:20px;
+overflow:hidden;
+
+}
+
+.bar{
+
+width:0%;
+height:100%;
+background:#00d0ff;
+transition:2s;
+
+}
+
+table{
+
+width:100%;
+margin-top:20px;
+
+}
+
+td{
+
+padding:8px;
+font-size:18px;
+
+}
+
+.footer{
+
+margin-top:20px;
+font-size:13px;
+color:#8ab7d7;
+
+}
+</style>
+
+</head>
+
+<body>
+
+<canvas id="bg"></canvas>
+
+<div class="container">
+
+<div class="card">
+
+<!-- PAGE 1 -->
+
+<div id="page1" class="page active">
+
+<div class="logo">ZX__SCOOBY XMODZ</div>
+
+<div class="sub">Unlimited Sensitivity Generator BY ZX__SCOOBY</div>
+
+<button class="join" onclick="window.open('https://t.me/+BvwkFbfogRdkZjA1')">
+
+JOIN CHANNEL 1
+
+</button>
+
+<button class="join" onclick="window.open('https://t.me/+_qTU_MAMKUszYjll')">
+
+JOIN CHANNEL 2
+
+</button>
+
+<button class="join" onclick="openLogin()">
+
+I HAVE JOINED
+
+</button>
+
+</div>
+
+<!-- PAGE 2 -->
+
+<div id="page2" class="page">
+
+<div class="logo">ENTER LICENSE</div>
+
+<input id="key" placeholder="License Key">
+
+<button class="join" onclick="login()">
+
+LOGIN
+
+</button>
+
+</div>
+
+<!-- PAGE 3 -->
+
+<div id="page3" class="page">
+
+<div class="logo">VIP SENSI BY SCOOBY</div>
+
+<div id="device"></div>
+
+<div class="progress">
+
+<div id="bar" class="bar"></div>
+
+</div>
+
+<table>
+
+<tr><td>General</td><td id="g">0</td></tr>
+
+<tr><td>Red Dot</td><td id="r">0</td></tr>
+
+<tr><td>2X Scope</td><td id="s2">0</td></tr>
+
+<tr><td>4X Scope</td><td id="s4">0</td></tr>
+
+<tr><td>Sniper</td><td id="sn">0</td></tr>
+
+<tr><td>Free Look</td><td id="fl">0</td></tr>
+
+</table>
+
+<button class="telegram" onclick="generate()">
+
+GENERATE VIP SENSI
+
+</button>
+
+<button class="join"
+
+onclick="window.open('https://t.me/ZX_SCOOBY')">
+
+DM FOR PAID SENSI
+
+</button>
+
+<div class="footer">
+
+ZX__SCOOBYXMODZ PAID SENSI
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+function openLogin(){
+
+page1.classList.remove("active");
+
+page2.classList.add("active");
+
+}
+
+function login(){
+
+if(key.value=="ZXSCOOBY333"){
+
+page2.classList.remove("active");
+
+page3.classList.add("active");
+
+device.innerHTML=navigator.userAgent;
+
+bar.style.width="100%";
+
+setTimeout(generate,2000);
+
+}
+
+else{
+
+alert("Wrong License");
+
+}
+
+}
+
+function random(){
+
+return Math.floor(Math.random()*51)+150;
+
+}
+
+function generate(){
+
+g.innerHTML=random();
+
+r.innerHTML=random();
+
+s2.innerHTML=random();
+
+s4.innerHTML=random();
+
+sn.innerHTML=Math.floor(Math.random()*40)+60;
+
+fl.innerHTML=200;
+
+}
+
+const canvas=document.getElementById("bg");
+
+const ctx=canvas.getContext("2d");
+
+canvas.width=innerWidth;
+
+canvas.height=innerHeight;
+
+let p=[];
+
+for(let i=0;i<120;i++){
+
+p.push({
+
+x:Math.random()*canvas.width,
+
+y:Math.random()*canvas.height,
+
+r:Math.random()*2,
+
+d:Math.random()*2
+
+});
+
+}
+
+function draw(){
+
+ctx.clearRect(0,0,canvas.width,canvas.height);
+
+ctx.fillStyle="#00cfff";
+
+for(let i of p){
+
+ctx.beginPath();
+
+ctx.arc(i.x,i.y,i.r,0,6.28);
+
+ctx.fill();
+
+i.y+=i.d;
+
+if(i.y>canvas.height)i.y=0;
+
+}
+
+requestAnimationFrame(draw);
+
+}
+
+draw();
+
+</script>
+
+</body>
+</html>
